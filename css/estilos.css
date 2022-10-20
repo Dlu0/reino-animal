@@ -37,6 +37,9 @@ nav ul li {
 nav ul li a{
     text-decoration: none;
 }
+section article .yutu{
+    width: 100%;
+}
 /**seccion del leon index*/
 section article{
     background: #34e89e;  /* fallback for old browsers */
@@ -82,8 +85,7 @@ footer ul li a{
     text-decoration: none;
 }
 footer ul{
-display: flex;
-    flex-direction: row;
+    
     list-style: none;
 }
 /**F-I-T redes sociales*/
@@ -118,7 +120,6 @@ main{
 /**primera parte main, index */
 .contenedor-nuestra-mision{
     width: 100%;
-    max-width: 1000;
     padding: 60px;
     font-family: 'Poppins', sans-serif;
     font-style: inherit;
@@ -171,6 +172,10 @@ main img{
     padding: 20px;
     font-style: inherit;
     font-family: 'Poppins', sans-serif;
+}
+main .frutas{
+    display: flex;
+    align-items: center;
 }
 /**yaguarete AEPE*/
 .background-img-yaguarete{
@@ -340,3 +345,50 @@ main .mainContacto img{
     color: rgb(19, 133, 85);
     font-size: 40px;
 }
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.contBody header{
+grid-area: header;
+}
+.contBody main{
+grid-area: main;
+}
+.contBody footer{
+grid-area: footer;
+}
+@media (max-width 576px)
+.contBody{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: repeat(1 1fr);
+    grid-template-rows: repeat(3 1fr);
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer"
+    ;
+}
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen add (max-width 768px){
+
+    .contBody{
+    grid-template-columns: repeat (1 1fr);
+    grid-template-rows: repeat (3 1fr);
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+}
+}
+article img{
+    width: 60%;
+}
+
